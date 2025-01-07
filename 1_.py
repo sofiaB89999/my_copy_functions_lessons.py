@@ -1,34 +1,82 @@
-# Methods, Help & Documentation Practice #1
-# Remove the characters to the left of our main text:
+# functions are a way to wrap your code
+# into reusuable units
 
-# ,
+#Define a funtion
+#YOU ONLY DEFINE THE FUNCTION ONCE
+#whatever I pass inside the parantheses 
+#Is called a parameter
+#A parameter is a palceholder for future information
 
-# :
+# def sayHello(name,age, street):
+#     print(f"say hello {name} :D")
+#     print("Hello Governor")
+#     print(f"Welcome back {name}")
+#     print(f"your age is {age}")
+#     print(f"Your street is {street}")
 
-# %
+# once you can define a function
+# you can call or invoke the function as many times as you like
+#when I pass information into the called function it is called an ---argument---
+    
+#sayHello("Sofi", 16, "Kostner")
+#sayHello("Shey", 19, "59th Place")
 
-# _
+#IT DOES MATTER THE WAY YOU PLACE IT AS IT ASSINGS VALUE BY ORDER
 
-# #
+# def determineEligibility(age):
+    #if your age is over 18 you can vote
+    #otherwise you can'
+    # if age >= 18:
+    #     print("You can vote")
+    # else:
+    #     print("you have to wait :/")
 
-# Use the lstrip() method. Print the result to the screen:
+#determineEligibility(12)
+#determineEligibility(15)
+#determineEligibility(19)
 
-# ",:_#,,,,,,:::____##Total_ _Pyt%on,,,,,,::#"
+# def willYouGraduate(gpa,credits,SAT):
+    #gpa :number variable
+    #credits :number variable
+    #passed SAT :boolean
+#     if (gpa == 3.0) and (credits >= 28) and (SAT == True):
+#         print("You passed, Good luck in college")
+#     elif (gpa <3.0) or (credits <28) or (SAT != True):
+#         print("Back to the drawing board.")
+#     else:
+#         print("Talk to your counselor")
+    
+# willYouGraduate(2.8,15,True)
+# willYouGraduate(1.5,27,False)
+# willYouGraduate(3,28,True)
+    
+#return = statement used to END A FUNCTION 
+#And sent result back to the caller
 
-# Search the documentation for the requested method to learn how it works. You can use intermediate variables if you need them.
+def add(x, y):
+    z = x + y
+    return z
 
+def subtract(x, y):
+    z = x - y
+    return z
 
-# Methods, Help & Documentation Practice #2
-# Add the element "orange" as the fourth element of the following list fruits, using the insert() method:
+def multiply(x,y):
+    z= x * y
+    return z
 
-# fruits = ["mango", "banana", "cherry", "plum", "grapefruit"]
+def divide(x,y):
+    z = x / y
+    return z
 
-# Search the documentation for the requested method to know how it works.
+print(add(1,2))
+print(subtract(1,2))
+print(multiply(1,2))
+print(divide(1,2))
 
-# Methods, Help & Documentation Practice #3
-# Check if the sets below are isolated (that is, they have no elements in common), using the isdisjoint() method. Store this result in the isolated_sets variable:
+def create_name(first, last):
+    first= first.capitalize()
+    last= last.capitalize()
+    return first + " " + last
 
-# phone_brands = {"Samsung", "Xiaomi", "Apple", "Huawei", "LG"}
-# tv_brands = {"Sony", "Philips", "Samsung", "LG"}
-# Search the documentation for the requested method to know how it works.
-
+full_name = create_name("Spongebob", "Squarepants")
